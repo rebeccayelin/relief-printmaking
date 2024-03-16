@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Relief Printing</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Processing for Relief Printing</h1>
+      <p>
+        As part of my
+        <a
+          href="https://www.moma.org/collection/terms/relief-print#:~:text=A%20general%20term%20for%20those,and%20rubber%20or%20metal%20stamping."
+          >relief printmaking</a
+        >
+        explorations, I hacked together the following tool that receives a
+        target image as input. It transforms this image into a black and white
+        rendition to visualize how it could once printed. Then, to assist in
+        reasoning about areas of the surface to be carved out, the tool inverts
+        the back and white image.
+      </p>
+      <h3>Examples:</h3>
+      <div class="grid-container">
+        <img src="example/original.png" alt="Original Example" />
+        <img src="example/bw.png" alt="Black and White Example" />
+        <img src="example/inverted.png" alt="Inverted Example" />
+      </div>
+      <hr />
+      <input type="file" id="imageInput" accept="image/*" />
+      <div id="imageContainer"></div>
+      <canvas id="canvas" style="display: none"></canvas>
+    </div>
+    <footer>
+      <p>Made by <a href="https://rebeccayelin.github.io/">Bex</a></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
